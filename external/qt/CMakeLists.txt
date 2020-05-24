@@ -92,7 +92,6 @@ else()
         lib/${qt_lib_prefix}Qt5Gui
         lib/${qt_lib_prefix}Qt5OpenGL
         lib/${qt_lib_prefix}Qt5OpenGLExtensions
-        lib/${qt_lib_prefix}Qt5VulkanSupport
         lib/${qt_lib_prefix}qtharfbuzz
         lib/${qt_lib_prefix}qtlibpng
     )
@@ -101,6 +100,7 @@ else()
     if (WIN32)
         set(qt_libs
             ${common_qt_libs}
+            lib/${qt_lib_prefix}Qt5VulkanSupport
             lib/${qt_lib_prefix}Qt5Core
             lib/${qt_lib_prefix}Qt5WindowsUIAutomationSupport
             lib/${qt_lib_prefix}qtmain
@@ -170,18 +170,18 @@ else()
         set(qt_libs
             plugins/platforminputcontexts/${qt_lib_prefix}composeplatforminputcontextplugin
             ${qt_libs_dbus_plugins}
-            plugins/wayland-decoration-client/${qt_lib_prefix}bradient
-            plugins/wayland-shell-integration/${qt_lib_prefix}ivi-shell
-            plugins/wayland-shell-integration/${qt_lib_prefix}wl-shell
-            plugins/wayland-shell-integration/${qt_lib_prefix}xdg-shell-v5
-            plugins/wayland-shell-integration/${qt_lib_prefix}xdg-shell-v6
-            plugins/wayland-shell-integration/${qt_lib_prefix}xdg-shell
-            plugins/wayland-graphics-integration-client/${qt_lib_prefix}qt-plugin-wayland-egl
-            plugins/wayland-graphics-integration-client/${qt_lib_prefix}drm-egl-server
-            plugins/wayland-graphics-integration-client/${qt_lib_prefix}dmabuf-server
-            plugins/wayland-graphics-integration-client/${qt_lib_prefix}shm-emulation-server
-            plugins/platforms/${qt_lib_prefix}qwayland-egl
-            plugins/platforms/${qt_lib_prefix}qwayland-generic
+#            plugins/wayland-decoration-client/${qt_lib_prefix}bradient
+#            plugins/wayland-shell-integration/${qt_lib_prefix}ivi-shell
+#            plugins/wayland-shell-integration/${qt_lib_prefix}wl-shell
+#            plugins/wayland-shell-integration/${qt_lib_prefix}xdg-shell-v5
+#            plugins/wayland-shell-integration/${qt_lib_prefix}xdg-shell-v6
+#            plugins/wayland-shell-integration/${qt_lib_prefix}xdg-shell
+#            plugins/wayland-graphics-integration-client/${qt_lib_prefix}qt-plugin-wayland-egl
+#            plugins/wayland-graphics-integration-client/${qt_lib_prefix}drm-egl-server
+#            plugins/wayland-graphics-integration-client/${qt_lib_prefix}dmabuf-server
+#            plugins/wayland-graphics-integration-client/${qt_lib_prefix}shm-emulation-server
+#            plugins/platforms/${qt_lib_prefix}qwayland-egl
+#            plugins/platforms/${qt_lib_prefix}qwayland-generic
             plugins/platforms/${qt_lib_prefix}qxcb
             plugins/iconengines/${qt_lib_prefix}qsvgicon
             lib/${qt_lib_prefix}Qt5XcbQpa
@@ -191,7 +191,7 @@ else()
             ${qt_libs_dbus_support}
             plugins/bearer/${qt_lib_prefix}qgenericbearer
             ${qt_libs_dbus_bearers}
-            lib/${qt_lib_prefix}Qt5WaylandClient
+#            lib/${qt_lib_prefix}Qt5WaylandClient
             ${common_qt_libs}
             ${qt_libs_dbus}
             lib/${qt_lib_prefix}Qt5Svg
@@ -242,14 +242,14 @@ else()
         endif()
         target_link_static_libraries(external_qt
         INTERFACE
-            wayland-egl
-            wayland-cursor
-            wayland-client
+#            wayland-egl
+#            wayland-cursor
+#            wayland-client
             xcb-shm
             xcb-xfixes
             xcb-render
             xkbcommon
-            xkbcommon-x11
+#            xkbcommon-x11
             Xrender
             ffi
             icutu
