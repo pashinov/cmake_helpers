@@ -27,6 +27,9 @@ INTERFACE
     /wd4068 # Disable "warning C4068: unknown pragma"
     /Zc:wchar_t- # don't tread wchar_t as builtin type
     /Zi
+    /experimental:preprocessor
+    /Wv:18
+    /FS
 )
 
 target_link_options(common_options
