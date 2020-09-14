@@ -31,6 +31,7 @@ INTERFACE
 
 set(ton_libs
     tonlib/${ton_lib_prefix}tonlib
+    ftabi/${ton_lib_prefix}ftabi
     tl/${ton_lib_prefix}tl_tonlib_api
     crypto/${ton_lib_prefix}smc-envelope
     lite-client/${ton_lib_prefix}lite-client-common
