@@ -12,6 +12,7 @@ macro(add_checked_subdirectory name)
 endmacro()
 
 add_checked_subdirectory(auto_updates)
+add_checked_subdirectory(boost)
 add_checked_subdirectory(crash_reports)
 if (LINUX AND NOT DESKTOP_APP_DISABLE_DBUS_INTEGRATION)
     add_checked_subdirectory(dbusmenu_qt)
