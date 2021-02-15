@@ -4,6 +4,7 @@ add_library(desktop-app::external_boost ALIAS external_boost)
 if (MSVC)
     set(Boost_DIR "${libs_loc}/boost/lib/cmake/Boost-1.75.0")
 endif()
+set(Boost_USE_STATIC_LIBS ON)
 find_package(Boost 1.75.0 CONFIG COMPONENTS system REQUIRED)
 
 if (NOT ${Boost_FOUND})
