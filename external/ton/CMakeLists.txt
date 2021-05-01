@@ -47,6 +47,7 @@ set(ton_libs
     crypto/${ton_lib_prefix}ton_crypto
     tdutils/${ton_lib_prefix}tdutils
     third-party/crc32c/${ton_lib_prefix}crc32c
+    third-party/ledgercpp/${ton_lib_prefix}ledgercpp
 )
 foreach (lib ${ton_libs})
     list(APPEND ton_libs_list "${ton_build_loc}/${lib}${ton_lib_suffix}")
